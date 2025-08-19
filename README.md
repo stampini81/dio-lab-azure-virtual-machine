@@ -1,62 +1,73 @@
+
+
 # Laboratório DIO: Criando uma Máquina Virtual no Azure
 
-Este repositório documenta a experiência prática do laboratório "Criando uma Máquina Virtual no Azure", parte da formação da DIO. O objetivo deste desafio é aplicar os conceitos de computação em nuvem, especificamente na criação de uma Máquina Virtual (VM) com Windows no portal do Microsoft Azure.
+Este repositório documenta o laboratório prático "Criando uma Máquina Virtual no Azure" da DIO, focado em computação em nuvem e criação de uma VM Windows no portal Azure.
 
-## Resumo dos Conceitos Aprendidos
+## Pré-requisitos
 
-Durante as aulas, foram abordados os conceitos fundamentais que servem de base para a computação em nuvem e para a utilização de serviços como o Azure. Os principais tópicos foram:
+- Conta ativa no [Microsoft Azure](https://portal.azure.com/)
+- Navegador web
+- Ferramenta para capturas de tela (Windows: `Win + Shift + S`)
 
-* **Computação em Nuvem:** É a entrega de serviços de computação (como servidores, armazenamento e redes) pela internet. Este modelo permite inovar mais rápido, ter recursos flexíveis e se beneficiar da economia de escala.
-* **Modelos de Nuvem:**
-    * **Pública:** A infraestrutura pertence a um provedor (como a Microsoft) e é compartilhada por vários clientes.
-    * **Privada:** A infraestrutura é de uso exclusivo de uma única organização.
-    * **Híbrida:** Combina as nuvens pública e privada para obter o melhor dos dois mundos, mantendo o controle sobre dados sensíveis enquanto aproveita a escalabilidade da nuvem pública.
-* **Benefícios da Nuvem:**
-    * **Alta Disponibilidade:** Garante o máximo de tempo de atividade dos serviços, independentemente de falhas.
-    * **Escalabilidade:** Capacidade de adicionar recursos para lidar com o aumento da demanda.
-    * **Elasticidade:** Habilidade de aumentar ou diminuir recursos de forma automática para atender a picos de demanda.
-    * **Modelo de Consumo (OpEx):** Paga-se apenas pelos recursos que são utilizados, transformando despesas de capital (CapEx) em despesas operacionais.
+## Passo a Passo
 
-## Passo a Passo da Criação da VM no Azure
+### 1. Acesso ao Portal do Azure
+Acesse o [portal do Azure](https://portal.azure.com/) e clique em **Criar um recurso**.
 
-A seguir, estão os passos realizados para a criação de uma Máquina Virtual do Windows no portal do Azure, conforme o guia "Início Rápido: Criar uma máquina virtual do Windows no Portal do Azure".
+![Acesso ao portal](https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/media/quick-create-portal/instance-details.png)
 
-*(**Dica:** Substitua as imagens de exemplo pelas suas próprias capturas de tela. Crie uma pasta `/images` no seu repositório para organizá-las.)*
+### 2. Configuração da Máquina Virtual
+Preencha os campos conforme o tutorial. Recomenda-se:
+- Grupo de Recursos: `dio-lab-vm-rg`
+- Nome: `dio-vm-windows`
+- Região: `East US`
+- Imagem: `Windows Server 2022`
+- Tamanho: `Standard_B1s`
+- Libere a porta RDP (3389)
 
-**1. Acesso ao Portal do Azure e Criação do Recurso**
-* Acessei o portal do Azure (`portal.azure.com`).
-* No menu, selecionei **"Criar um recurso"**.
-* Busquei por **"Máquina Virtual"** e iniciei o processo de criação.
+![Configuração da VM](https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/media/quick-create-portal/administrator-account.png)
+![Regras de porta de entrada](https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/media/quick-create-portal/inbound-port-rules.png)
 
-**2. Configurações Básicas**
-* **Assinatura e Grupo de Recursos:** Selecionei minha assinatura e criei um novo Grupo de Recursos chamado `dio-lab-vm-rg` para organizar os recursos deste laboratório.
-* **Detalhes da Instância:**
-    * **Nome da máquina virtual:** `dio-vm-windows`
-    * **Região:** `(US) East US` (Leste dos EUA)
-    * **Imagem:** `Windows Server 2022 Datacenter: Azure Edition - x64 Gen2`
-    * **Tamanho:** `Standard_B1s` (1 vCPU, 1 GiB de memória)
-* **Conta de Administrador:** Defini um nome de usuário e uma senha segura para acessar a VM.
-* **Regras de Porta de Entrada:** Liberei a porta **RDP (3389)** para permitir a conexão remota.
+### 3. Disco e Rede
+Mantenha as configurações padrão de disco e rede.
 
-![Exemplo de captura de tela das configurações básicas](images/configuracao-basica.png)
+### 4. Revisão e Criação
+Revise as configurações e clique em **Criar**.
 
-**3. Configurações de Disco e Rede**
-* **Discos:** Mantive o padrão com um Disco do SO do tipo SSD Standard.
-* **Rede:** As configurações de rede virtual, sub-rede e IP público foram criadas automaticamente pelo Azure.
+![Revisão e criação](https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/media/quick-create-portal/review-create.png)
+![Validação aprovada](https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/media/quick-create-portal/validation.png)
+![Ir para o recurso](https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/media/quick-create-portal/next-steps.png)
 
-**4. Revisão e Criação**
-* Revisei todas as configurações na aba "Examinar + criar".
-* Após a validação ser aprovada, cliquei em **"Criar"**.
-* Aguardei o processo de implantação ser concluído.
+### 5. Conexão via RDP
+Após a implantação, conecte-se à VM usando o arquivo RDP gerado.
 
-**5. Conexão com a Máquina Virtual**
-* Com a implantação concluída, naveguei até o recurso da máquina virtual.
-* Cliquei em **"Conectar"** e escolhi a opção **RDP**.
-* Baixei o arquivo RDP e o executei para iniciar a Conexão de Área de Trabalho Remota.
-* Utilizei o usuário e a senha definidos no passo 2 para me conectar à VM com sucesso.
+![Conectar via RDP](https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/media/quick-create-portal/portal-quick-start-9.png)
 
-![Exemplo de captura de tela da conexão RDP](images/conexao-vm.png)
+### 6. Instalar servidor Web (opcional)
+Na VM, abra o PowerShell e execute:
+```powershell
+Install-WindowsFeature -name Web-Server -IncludeManagementTools
+```
+Depois, acesse o IP público da VM no navegador para ver a página padrão do IIS:
+
+![Site padrão do IIS](https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/media/quick-create-powershell/default-iis-website.png)
+
+## Como adicionar capturas de tela próprias
+
+1. Crie uma pasta chamada `images` no repositório.
+2. Salve suas capturas de tela nela.
+3. Referencie as imagens no README usando:
+    `![Descrição](images/nome-da-imagem.png)`
+
+## Links úteis
+
+- [Documentação oficial Azure VMs](https://learn.microsoft.com/pt-br/azure/virtual-machines/)
+- [Guia DIO](https://web.dio.me/)
 
 ## Conclusão
 
-Este desafio foi uma excelente oportunidade para colocar em prática os conceitos teóricos de computação em nuvem. A criação de uma Máquina Virtual no Azure é um processo estruturado e intuitivo, e o portal oferece uma visão clara de todos os recursos envolvidos (computação, rede, armazenamento). Documentar o processo no GitHub reforça a importância de manter um registro claro e compartilhável do trabalho técnico.
+Este laboratório reforça conceitos de nuvem e mostra como criar e acessar uma VM no Azure. Documente seu processo com capturas de tela para facilitar o aprendizado e compartilhamento.
+
+---
+*Imagens oficiais retiradas da [documentação Microsoft Learn](https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/quick-create-portal).*
