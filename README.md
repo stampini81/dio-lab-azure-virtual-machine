@@ -6,16 +6,16 @@ Este repositório documenta a experiência prática do laboratório "Criando uma
 
 Durante as aulas, foram abordados os conceitos fundamentais que servem de base para a computação em nuvem e para a utilização de serviços como o Azure. Os principais tópicos foram:
 
-* [cite_start]**Computação em Nuvem:** É a entrega de serviços de computação (como servidores, armazenamento e redes) pela internet[cite: 311]. [cite_start]Este modelo permite inovar mais rápido, ter recursos flexíveis e se beneficiar da economia de escala[cite: 311].
+* **Computação em Nuvem:** É a entrega de serviços de computação (como servidores, armazenamento e redes) pela internet. Este modelo permite inovar mais rápido, ter recursos flexíveis e se beneficiar da economia de escala.
 * **Modelos de Nuvem:**
-    * [cite_start]**Pública:** A infraestrutura pertence a um provedor (como a Microsoft) e é compartilhada por vários clientes[cite: 328, 329].
-    * [cite_start]**Privada:** A infraestrutura é de uso exclusivo de uma única organização[cite: 323].
-    * [cite_start]**Híbrida:** Combina as nuvens pública e privada para obter o melhor dos dois mundos, mantendo o controle sobre dados sensíveis enquanto aproveita a escalabilidade da nuvem pública[cite: 336, 355].
+    * **Pública:** A infraestrutura pertence a um provedor (como a Microsoft) e é compartilhada por vários clientes.
+    * **Privada:** A infraestrutura é de uso exclusivo de uma única organização.
+    * **Híbrida:** Combina as nuvens pública e privada para obter o melhor dos dois mundos, mantendo o controle sobre dados sensíveis enquanto aproveita a escalabilidade da nuvem pública.
 * **Benefícios da Nuvem:**
-    * [cite_start]**Alta Disponibilidade:** Garante o máximo de tempo de atividade dos serviços, independentemente de falhas[cite: 125].
-    * [cite_start]**Escalabilidade:** Capacidade de adicionar recursos para lidar com o aumento da demanda[cite: 137, 138].
-    * [cite_start]**Elasticidade:** Habilidade de aumentar ou diminuir recursos de forma automática para atender a picos de demanda[cite: 155, 160].
-    * [cite_start]**Modelo de Consumo (OpEx):** Paga-se apenas pelos recursos que são utilizados, transformando despesas de capital (CapEx) em despesas operacionais[cite: 364, 366].
+    * **Alta Disponibilidade:** Garante o máximo de tempo de atividade dos serviços, independentemente de falhas.
+    * **Escalabilidade:** Capacidade de adicionar recursos para lidar com o aumento da demanda.
+    * **Elasticidade:** Habilidade de aumentar ou diminuir recursos de forma automática para atender a picos de demanda.
+    * **Modelo de Consumo (OpEx):** Paga-se apenas pelos recursos que são utilizados, transformando despesas de capital (CapEx) em despesas operacionais.
 
 ## Passo a Passo da Criação da VM no Azure
 
